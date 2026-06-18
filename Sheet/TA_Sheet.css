@@ -1,0 +1,394 @@
+h1, h2, h3, h4, h5, h6, label, button
+{
+    font-family: "Candal";
+}
+
+.same-line,
+.grid
+{
+    display: flex;
+}
+.grid-row
+{
+    display: flex;
+    flex: 1;
+}
+.grid-col
+{
+    flex: 1;
+}
+
+.remove-margin
+{
+    margin-top: -0.5em;
+}
+
+/* configure the tab buttons */
+.sheet-main_info,
+.sheet-anomaly,
+.sheet-reality, 
+.sheet-competency,
+.sheet-worklife
+{
+    display: none;
+}
+
+/* style the active button */
+.sheet-tabstoggle[value="main_info"] ~ div .sheet-button0 {outline: 2px solid black;}
+.sheet-tabstoggle[value="anomaly"] ~ div .sheet-button1 {outline: 2px solid #2B50A3;}
+.sheet-tabstoggle[value="reality"] ~ div .sheet-button2 {outline: 2px solid #EEAE1E;}
+.sheet-tabstoggle[value="competency"] ~ div .sheet-button3 {outline: 2px solid #CB2130;}
+.sheet-tabstoggle[value="worklife"] ~ div .sheet-button4 {outline: 2px solid black;}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="main_info"] ~ div.sheet-main_info,
+.sheet-tabstoggle[value="anomaly"] ~ div.sheet-anomaly,
+.sheet-tabstoggle[value="reality"] ~ div.sheet-reality, 
+.sheet-tabstoggle[value="competency"] ~ div.sheet-competency,
+.sheet-tabstoggle[value="worklife"] ~ div.sheet-worklife
+{
+    display: block;
+}
+
+.button-holder
+{
+    position: absolute;
+    right: 3em;
+    top: 6em;
+}
+
+.roll-button,
+.rollsponsor-button
+{
+    width: 75px;
+    height: 25px;
+}
+input.normalroll-flag:not([value="1"]) ~ button.roll-button
+{
+    display: none;
+}
+input.sponsorroll-flag:not([value="1"]) ~ button.rollsponsor-button
+{
+    display: none;
+}
+.unleash-button
+{
+    width: 120px;
+    height: 25px;
+    color: #2B50A3;
+}
+input.unleash-flag:not([value="1"]) ~ button.unleash-button
+{
+    display: none;
+}
+.d10-button
+{
+    width: 60px;
+    height: 25px;
+    color: #2B50A3;
+}
+input.d10-flag:not([value="1"]) ~ button.d10-button
+{
+    display: none;
+}
+
+.top-info-grid
+{
+    display: flex;
+}
+
+.top-name-col
+{
+    flex: 2;
+    padding-right: 2em;
+}
+
+.top-ARC-col
+{
+    flex: 1;
+    margin-bottom: 2em;
+}
+
+.name-col-input
+{
+    width: 100%;
+}
+
+.anomaly-color,
+.ARC-anomaly-label::first-letter
+{
+    color: #2B50A3;
+}
+
+.reality-color,
+.ARC-reality-label::first-letter
+{
+    color: #EEAE1E;
+}
+
+.compentency-color,
+.ARC-competency-label::first-letter
+{
+    color: #CB2130;
+}
+
+.comm-qa-grid
+{
+    display: flex;
+}
+
+.comm-col
+{
+    flex: 2;
+}
+
+.qa-col
+{
+    flex: 1;
+}
+
+.comm-label
+{
+    margin-left: 1em;
+}
+
+.comm-col textarea
+{
+    width: 90%;
+    height: 6em;
+    resize: none;
+}
+
+.comm-col-input
+{
+    width: 90%;
+}
+
+.qa-section
+{
+    margin-bottom: 1em;
+}
+
+.repeating_ability-entry
+{
+    border: solid 1px #BBBEE0;
+    border-radius: 5px;
+}
+
+.ability-grid,
+.ability-upgrade-grid
+{
+    display: flex;
+}
+
+.ability-header
+{
+    display: flex;
+    background-color: #E3E4F3;
+    margin-bottom: 0.5em;
+}
+
+.ability-header-col1
+{
+    flex: 4;
+}
+.ability-header-col2
+{
+    flex: 7;
+}
+.ability-header-col3
+{
+    flex: 2;
+}
+
+.ability-grid-results-col,
+.ability-grid-failure-col
+{
+    flex: 1;
+}
+
+.ability-upgrade-QA-col
+{
+    flex: 4;
+}
+
+.ability-upgrade-checkboxes-col
+{
+    flex: 1;
+}
+
+.ability-grid-results-col textarea
+{
+    width: 95%;
+    height: 7em;
+    resize: none;
+}
+
+.ability-grid-failure-col textarea
+{
+    width: 98%;
+    height: 7em;
+    resize: none;
+}
+
+.ability-upgrade-QA-col textarea
+{
+    width: 92%;
+    height: 7em;
+    resize: none;
+}
+
+.upgrade-checkboxes-text
+{
+    margin-left: 0.25em;
+    width: 45%;
+}
+
+
+.relationship-entry
+{
+    border: solid 1px #F2BA46;
+    border-radius: 5px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.relationship-header
+{
+    display: flex;
+    background-color: #FEF5E6;
+    margin-bottom: 0.5em;
+}
+
+.relationship-entry textarea
+{
+    width: 95%;
+    height: 7em;
+    resize: none;
+}
+
+.net-bonus-label
+{
+    flex-shrink: 1;
+}
+
+.net-bonus-box
+{
+    flex-shrink: 1;
+    margin-left: 0.5em;
+    margin-right: 1em;
+}
+
+.req-entry
+{
+    border: solid 1px #E9AC9B;
+    border-radius: 5px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.req-header
+{
+    display: flex;
+    background-color: #FAE7E0;
+    margin-bottom: 0.5em;
+}
+
+.req-entry textarea
+{
+    width: 95%;
+    height: 7em;
+    resize: none;
+}
+
+.worklife_warning
+{
+    background-color: #F8E5DE;
+    border-radius: 5px;
+    padding: 1em;
+    margin-right: 2em;
+    flex: 2;
+}
+
+.worklife-undertext
+{
+    margin-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.competency-undertext
+{
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: solid 1px #CB2130;
+    border-radius: 5px;
+}
+
+.reality-undertext
+{
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: solid 1px #EEAE1E;
+    border-radius: 5px;
+}
+
+.anomaly-undertext
+{
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: solid 1px #2B50A3;
+    border-radius: 5px;
+}
+
+.bold-input
+{
+    font-weight: bold;
+}
+
+.shrink-bottom
+{
+    margin-bottom: 8em;
+}
+
+.time-checkboxes select
+{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.6em;
+    padding-right: 0.5em;
+    width:2.75em;
+    height:2.75em;
+    font-size: large;
+}
+
+#L10_checkbox
+{
+    padding-left: 0.5em;
+}
+
+.compentency-color select
+{
+    color: #CB2130;
+}
+
+.reality-color select
+{
+    color: #EEAE1E;
+}
+
+.anomaly-color select
+{
+    color: #2B50A3;
+}

@@ -1,0 +1,814 @@
+
+<div class="button-holder same-line">
+  <input type="hidden" class="normalroll-flag" name="attr_normalroll" value="0" />  
+  <button type="roll" value="/roll 6d4" name="roll_TA" class="roll-button">Roll!</button>
+  <input type="hidden" class="sponsorroll-flag" name="attr_sponsorroll" value="0" />  
+  <button type="roll" value="/roll 6d4 + 1d8" name="roll_TASponsor" class="rollsponsor-button">Roll!</button>
+  <input type="hidden" class="unleash-flag" name="attr_unleash" value="0" />
+  <button type="roll" value="/roll 1d6" name="roll_unleash" class="unleash-button">UNL3ASH!</button>
+  <input type="hidden" class="d10-flag" name="attr_used10" value="0" />
+  <button type="roll" value="/roll 1d10" name="roll_used10" class="d10-button">d10</button>
+</div>
+<input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="main_info" />
+<div>
+    <button type="action" name="act_main_info" class="sheet-button0">Main Info</button>
+    <button type="action" name="act_anomaly" class="sheet-button1">Anomaly</button>
+    <button type="action" name="act_reality" class="sheet-button2">Reality</button>
+    <button type="action" name="act_competency" class="sheet-button3">Competency</button>
+    <button type="action" name="act_worklife" class="sheet-button4">Work/Life Balance</button>
+</div><br>
+<div class="sheet-main_info">
+    <div class="top-info-grid">
+        <div class="top-name-col">
+            <h3>Character Name</h3>
+            <input type="text" name="attr_character_name" class="name-col-input"/>
+            <h3>Agency Title</h3>
+            <input type="text" name="attr_agency_title" class="name-col-input"/>
+            <h3>Agency Standing</h3>
+            <input type="text" name="attr_agency_standing" class="name-col-input"/>
+        </div>
+        <div class="top-ARC-col">
+            <h3 class="ARC-anomaly-label">Anomaly</h3>
+            <input type="text" name="attr_arc_anomaly" class="name-col-input"/>
+            <h3 class="ARC-reality-label">Reality</h3>
+            <input type="text" name="attr_arc_reality" class="name-col-input"/>
+            <h3 class="ARC-competency-label">Competency</h3>
+            <input type="text" name="attr_arc_competency" class="name-col-input"/>
+        </div>
+    </div>
+    
+    <div class="comm-qa-grid">
+        <div class="comm-col">
+            <div class="same-line">
+                <input type="number" name="attr_commendations"/>
+                <h2 class="comm-label">Commendations</h2>
+            </div>
+            <div class="same-line">
+                <input type="number" name="attr_demerits"/>
+                <h2 class="comm-label">Demerits</h2>
+            </div>
+            <div class="same-line">
+                <input type="number" name="attr_extra_burnout"/>
+                <h2 class="comm-label">Additional Burnout</h2>
+            </div>
+            <br>
+            <h3 class="reality-color">Reality Trigger</h3>
+            <span>Your GM may trigger this by spending </span><span class="compentency-color">3</span><span> Chaos.</span><br>
+            <textarea name="attr_reality-trigger"></textarea>
+            <h3 class="reality-color">Burnout Release</h3>
+            <span>Check this to see if you can cancel your Burnout.</span><br>
+            <textarea name="attr_burnout_release"></textarea>
+            <h3 class="compentency-color">Prime Directive</h3>
+            <span>Receive 1 Demerit if you:</span><br>
+            <textarea name="attr_prime_directive"></textarea>
+            <h3 class="compentency-color">Sanctioned Behaviors</h3>
+            <span>Receive 1 Commendation when you do one of these:</span><br>
+            <input type="text" name="attr_sanc_behavior1" class="comm-col-input"/>
+            <input type="text" name="attr_sanc_behavior2" class="comm-col-input"/>
+            <input type="text" name="attr_sanc_behavior3" class="comm-col-input"/><br>
+            <span>If you do all 3 in a single Mission, receive </span><span class="compentency-color">3</span><span> bonus Commendations.</span>
+        </div>
+        <div class="qa-col">
+            <h2>Quality</h2>
+            <h2 class="remove-margin">Assurances</h2>
+            <h3>Attentiveness</h3>
+            <div class="same-line qa-section">
+                <input type="number" name="attr_attentiveness"/>
+                <h3> / </h3>
+                <input type="number" name="attr_attentiveness_max"/>
+            </div>
+            <h3>Duplicity</h3>
+            <div class="same-line qa-section">
+                <input type="number" name="attr_duplicity"/>
+                <h3> / </h3>
+                <input type="number" name="attr_duplicity_max"/>
+            </div>
+            <h3>Dynamism</h3>
+            <div class="same-line qa-section">
+                <input type="number" name="attr_dynamism"/>
+                <h3> / </h3>
+                <input type="number" name="attr_dynamism_max"/>
+            </div>
+            <h3>Empathy</h3>
+            <div class="same-line qa-section">
+                <input type="number" name="attr_empathy"/>
+                <h3> / </h3>
+                <input type="number" name="attr_empathy_max"/>
+            </div>
+            <h3>Initiative</h3>
+            <div class="same-line qa-section">
+                <input type="number" name="attr_initiative"/>
+                <h3> / </h3>
+                <input type="number" name="attr_initiative_max"/>
+            </div>
+            <h3>Persistence</h3>
+            <div class="same-line qa-section">
+                <input type="number" name="attr_persistence"/>
+                <h3> / </h3>
+                <input type="number" name="attr_persistence_max"/>
+            </div>
+            <h3>Presence</h3>
+            <div class="same-line qa-section">
+                <input type="number" name="attr_presence"/>
+                <h3> / </h3>
+                <input type="number" name="attr_presence_max"/>
+            </div>
+            <h3>Professionalism</h3>
+            <div class="same-line qa-section">
+                <input type="number" name="attr_professionalism"/>
+                <h3> / </h3>
+                <input type="number" name="attr_professionalism_max"/>
+            </div>
+            <h3>Subtlety</h3>
+            <div class="same-line qa-section">
+                <input type="number" name="attr_subtlety"/>
+                <h3> / </h3>
+                <input type="number" name="attr_subtlety_max"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sheet-anomaly">
+    <fieldset class="repeating_ability-entry">
+        <div class="ability-header">
+            <div class="ability-header-col1">
+                <h4>Ability</h4>
+                <input type="text" name="attr_anomaly_ability" class="name-col-input bold-input"/>
+            </div>
+            <div class="ability-header-col2">
+                <h4>Trigger</h4>
+                <input type="text" name="attr_anomaly_trigger" class="name-col-input bold-input"/>
+            </div>
+            <div class="ability-header-col3">
+                <h4>Quality</h4>
+                <input type="text" name="attr_anomaly_quality" class="name-col-input bold-input"/>
+            </div>
+        </div>
+        <div class="ability-grid">
+            <div class="ability-grid-results-col">
+                <textarea name="attr_anomaly_ability_result1">On a success...</textarea>
+                <textarea name="attr_anomaly_ability_result2">On this trigger...</textarea>
+            </div>
+            <div class="ability-grid-failure-col">
+                <textarea name="attr_anomaly_ability_failure">On a failure...</textarea>
+                <div class="ability-upgrade-grid">
+                    <div class="ability-upgrade-QA-col">
+                        <textarea name="attr_anomaly_ability1_QA">Q:
+
+A:
+
+A:</textarea>
+                    </div>
+                    <div class="ability-upgrade-checkboxes-col">
+                        <div class="same-line">
+                            <h5>PRACTICED?</h5>
+                            <input type="checkbox" name="attr_anomaly_ability_practiced">
+                        </div>
+                        <div class="same-line">
+                            <h5>PAGE#</h5>
+                            <input type="text" name="attr_anomaly_ability_pageno" class="upgrade-checkboxes-text"/>
+                        </div>
+                        <div class="same-line">
+                            <input type="checkbox" name="attr_anomaly_ability_answer1_box1">
+                            <input type="checkbox" name="attr_anomaly_ability_answer1_box2">
+                            <input type="checkbox" name="attr_anomaly_ability_answer1_box3">
+                            <input type="text" name="attr_anomaly_ability_answer1_pageno" class="upgrade-checkboxes-text"/>
+                        </div>
+                        <div class="same-line">
+                            <input type="checkbox" name="attr_anomaly_ability_answer2_box1">
+                            <input type="checkbox" name="attr_anomaly_ability_answer2_box2">
+                            <input type="checkbox" name="attr_anomaly_ability_answer2_box3">
+                            <input type="text" name="attr_anomaly_ability_answer2_pageno" class="upgrade-checkboxes-text"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sheet-reality">
+    <fieldset class="repeating_relationships">
+        <div class="grid-row">
+            <div class="relationship-entry">
+                <div class="relationship-header grid">
+                    <div class="grid-col">
+                        <h4>Name</h4>
+                        <input type="text" name="attr_relationship1_name" class="name-col-input"/>
+                    </div>
+                    <div class="grid-col">
+                        <h4>Played By</h4>
+                        <input type="text" name="attr_relationship1_player" class="name-col-input"/>
+                    </div>
+                    <div class="grid-col">
+                        <h4>Connection</h4>
+                        <input type="number" name="attr_relationship1_connection" min="0" max="9" value="0"/>
+                    </div>
+                </div>
+                <textarea name="attr_relationship1_desc">Description</textarea>
+                <div class="grid">
+                    <div class="grid-col">
+                        <h4>Connection Bonus</h4>
+                    </div>
+                    <div class="net-bonus-label">
+                        <h4>Active</h4>
+                    </div>
+                    <div class="net-bonus-box">
+                        <input type="checkbox" name="attr_networkbonus1_active">
+                    </div>
+                </div>
+                <textarea name="attr_relationship1_conn_bonus"></textarea>
+            </div>
+            <div class="relationship-entry">
+                <div class="relationship-header grid">
+                    <div class="grid-col">
+                        <h4>Name</h4>
+                        <input type="text" name="attr_relationship3_name" class="name-col-input"/>
+                    </div>
+                    <div class="grid-col">
+                        <h4>Played By</h4>
+                        <input type="text" name="attr_relationship3_player" class="name-col-input"/>
+                    </div>
+                    <div class="grid-col">
+                        <h4>Connection</h4>
+                        <input type="number" name="attr_relationship3_connection" min="0" max="9" value="0"/>
+                    </div>
+                </div>
+                <textarea name="attr_relationship3_desc">Description</textarea>
+                <div class="grid">
+                    <div class="grid-col">
+                        <h4>Connection Bonus</h4>
+                    </div>
+                    <div class="net-bonus-label">
+                        <h4>Active</h4>
+                    </div>
+                    <div class="net-bonus-box">
+                        <input type="checkbox" name="attr_networkbonus3_active">
+                    </div>
+                </div>
+                <textarea name="attr_relationship3_conn_bonus"></textarea>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="sheet-competency">
+    <fieldset class="repeating_requistions">
+        <div class="grid-row">
+            <div class="req-entry">
+                <div class="req-header grid">
+                    <div class="grid-col">
+                        <h4>Name</h4>
+                        <input type="text" name="attr_req1_name" class="name-col-input"/>
+                    </div>
+                    <div class="grid-col">
+                        <h4>Page#</h4>
+                        <input type="text" name="attr_req1_page" class="name-col-input"/>
+                    </div>
+                </div>
+                <textarea name="attr_req1_effect">Effect</textarea>
+            </div>
+            <div class="req-entry">
+                <div class="req-header grid">
+                    <div class="grid-col">
+                        <h4>Name</h4>
+                        <input type="text" name="attr_req3_name" class="name-col-input"/>
+                    </div>
+                    <div class="grid-col">
+                        <h4>Page#</h4>
+                        <input type="text" name="attr_req3_page" class="name-col-input"/>
+                    </div>
+                </div>
+                <textarea name="attr_req3_effect">Effect</textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sheet-worklife">
+    <div class="grid">
+        <div class="worklife_warning grid-col">
+            <span class="compentency-color">Each time you Spend Time (✔) on a track, you <b>must Deny (✖) an equal amount of Time</b> from the <b>end</b> of other track</span><span class="anomaly-color">s</span><span class="compentency-color">.</span>
+        </div>
+        <div class="grid-col">
+            <h4 class="compentency-color">Times MVP</h4>
+            <input type="number" name="attr_times_mvp" class="name-col-input" min="0" value="0"/>
+        </div>
+        <div class="grid-col">
+            <h4>Times on Probation</h4>
+            <input type="number" name="attr_times_probation" class="name-col-input" min="0" value="0"/>
+        </div>
+    </div>
+    <br>
+    <h2 class="compentency-color">Competency</h2>
+    <div class="time-checkboxes compentency-color">
+        <select name="attr_competency_unlock1">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock2">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock3">
+            <option value="0" selected="selected">A3</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock4">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock5">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock6">
+            <option value="0" selected="selected">D4</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock7">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock8">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock9">
+            <option value="0" selected="selected">G3</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock10">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock11">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock12">
+            <option value="0" selected="selected">J3</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock13">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock14">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock15">
+            <option value="0" selected="selected">N3</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+    </div>
+    <div class="time-checkboxes compentency-color">
+        <select name="attr_competency_unlock30">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock29">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock28">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock27">
+            <option value="0" selected="selected">Y2</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock26">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock25">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock24">
+            <option value="0" selected="selected">W8</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock23">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock22">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock21">
+            <option value="0" selected="selected">T3</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock20">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock19">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock18">
+            <option value="0" selected="selected">Q3</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock17">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_competency_unlock16">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+    </div>
+    <div class="grid">
+        <div class="grid-col competency-undertext">
+            <span>Each time you Spend Time on Competency, increase your
+            Max QA by 1 in any Quality. (Max 9)
+            Then, gain </span><span class="compentency-color">3</span><span> Commendations.</span>
+        </div>
+        <div class="grid-col competency-undertext">
+            <span>When you recieve <b>Mission MVP</b>, Spend Time in your Competency
+            track <i>without</i> Denying Time from the other tracks.</span>
+        </div>
+    </div>
+    <br>
+    <h2 class="reality-color">Reality</h2>
+    <div class="time-checkboxes reality-color">
+        <select name="attr_reality_unlock1">
+            <option value="0" selected="selected">C4</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock2">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock3">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock4">
+            <option value="0" selected="selected">L11</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock5">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock6">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock7">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock8">
+            <option value="0" selected="selected">E2</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock9">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock10">
+            <option value="0" selected="selected">O4</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock11">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock12">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock13">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock14">
+            <option value="0" selected="selected">T6</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock15">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+    </div>
+    <div class="time-checkboxes reality-color">
+        <select name="attr_reality_unlock30">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock29">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock28">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock27">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock26">
+            <option value="0" selected="selected">E3</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock25">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock24">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock23">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock22">
+            <option value="0" selected="selected">H5</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock21">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock20">
+            <option value="0" selected="selected">X3</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock19">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock18">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock17">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_reality_unlock16">
+            <option value="0" selected="selected">V2</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+    </div>
+    <div class="grid">
+        <div class="grid-col reality-undertext">
+            <span>Each time you Spend Time on Reality, increase Connection
+            with any Relationship by 1, then repeat for each Networked Relationship.</span>
+        </div>
+        <div class="grid-col reality-undertext">
+            <span>When you receive neither <b>MVP</b> nor <b>Probation</b>, you may
+            increase Connection with any Relationship by 1.</span>
+        </div>
+    </div>
+    <br>
+    <h2 class="anomaly-color">Anomaly</h2>
+    <div class="time-checkboxes anomaly-color">
+        <select name="attr_anomaly_unlock1">
+            <option value="0" selected="selected">H4</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock2">
+            <option value="0" selected="selected">H3</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock3">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock4">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock5">
+            <option value="0" selected="selected">U2</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock6">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock7">
+            <option value="0" selected="selected">X2</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock8">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock9">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock10">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock11">
+            <option value="0" selected="selected">N1</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock12">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock13">
+            <option value="0" selected="selected">Q2</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock14">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock15">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+    </div>
+    <div class="time-checkboxes anomaly-color">
+        <select name="attr_anomaly_unlock30">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock29">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock28">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock27">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock26">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock25">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock24">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock23">
+            <option value="0" selected="selected">A7</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock22">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock21">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock20">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock19">
+            <option value="0" selected="selected">G8</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock18">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock17" id="L10_checkbox">
+            <option value="0" selected="selected">L10</option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+          <select name="attr_anomaly_unlock16">
+            <option value="0" selected="selected"></option>
+            <option value="1">✔</option>
+            <option value="2">✖</option>
+          </select>
+    </div>
+    <div class="grid">
+        <div class="grid-col anomaly-undertext">
+            <span>Each time you Spend Time on Anomaly, pick one:<br>
+            <b>• Practice:</b> Mark "Practiced" on any Anomaly Ability.<br>
+            <b>• Be Known:</b> Erase "Practiced" from an Ability.  Ask your
+            team that Ability's question.  Mark the answer that gets the most votes.  After 3 checkmarks, recieve
+            any unlocked Abilities.</span><br>
+            <span class="anomaly-color"><b>(I can text you what this all means if you Spend Time to go to H4!)</b></span>
+        </div>
+        <div class="grid-col anomaly-undertext shrink-bottom">
+            <span>When you receive <b>Probation</b>, Spend Time on your Anomaly <i>without</i>
+            Denying Time from the other tracks.</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/worker">
+    const buttonlist = ["main_info", "anomaly", "reality", "competency", "worklife"];
+    buttonlist.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({
+                sheetTab: button
+            });
+        });
+    });
+</script>
