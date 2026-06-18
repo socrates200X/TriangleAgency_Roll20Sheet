@@ -2,7 +2,7 @@
 Welcome General Managers!  The files in this repo can be copied into your own Roll20 campaign to better faciliate your Agents' interface with the TTRPG Initiative in your region.
 
 ## Installation
-1. Download all files within the Sheet folder.  This should include, at least, an `TriangleAgency.html` and `TriangleAgency.css` file.
+1. Download all files within the `Sheet` folder.  This should include, at least, an `TriangleAgency.html` and `TriangleAgency.css` file.
 2. On your Roll20 Campaign page, under Settings > Game Settings, set your 'Character Sheet Template' to 'Custom'.
 3. Copy the contents of the HTML file into the 'HTML' tab of the sheet template, and the CSS file into the 'CSS' tab.
 4. Click 'Save Changes' at the bottom of the page.  That's it!
