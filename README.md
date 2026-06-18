@@ -1,4 +1,6 @@
-# A Roll 20 Sheet for *Triangle Agency*
+# A Roll20 Sheet for *Triangle Agency*
+![Example image of the Triangle Agency Roll20 sheet](/Images/TASheet.png)
+
 Welcome General Managers!  The files in this repo can be copied into your own Roll20 campaign to better faciliate your Agents' interface with the TTRPG Initiative in your region.
 
 ## Installation
